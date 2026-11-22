@@ -15,6 +15,13 @@
       "when": 1795321595780,
       "tag": "0001_capsule_owner_can_read_new_row",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795324731232,
+      "tag": "0002_restrict_profile_visibility",
+      "breakpoints": true
     }
   ]
 }

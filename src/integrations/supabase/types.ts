@@ -257,6 +257,7 @@ export type Database = {
     }
     Functions: {
       can_upload_to_capsule: { Args: { _capsule_id: string }; Returns: boolean }
+      can_view_profile: { Args: { _profile_id: string }; Returns: boolean }
       current_user_email: { Args: never; Returns: string }
       is_capsule_member: { Args: { _capsule_id: string }; Returns: boolean }
       is_capsule_open: { Args: { _capsule_id: string }; Returns: boolean }
