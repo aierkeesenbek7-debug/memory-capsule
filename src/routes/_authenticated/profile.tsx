@@ -82,7 +82,7 @@ function Profile() {
         </Orb>
         <div className="w-full min-w-0 flex-1 space-y-3 text-center sm:text-left">
           <form onSubmit={saveName} className="flex flex-col gap-2 sm:flex-row">
-            <Input value={name} onChange={(e) => setName(e.target.value)} maxLength={60} aria-label="Display name" className="h-11 rounded-xl font-display text-2xl" />
+            <Input value={name} onChange={(e) => setName(e.target.value)} maxLength={60} aria-label="Display name" className="h-11 rounded-xl text-base font-medium" />
             <Button type="submit" variant="glass" className="h-11">Save</Button>
           </form>
           <p className="truncate text-sm text-muted-foreground">{user.email}</p>

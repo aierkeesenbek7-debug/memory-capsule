@@ -35,7 +35,7 @@ export function SiteHeader() {
       <div className="glass-strong mx-auto flex h-14 max-w-6xl items-center justify-between rounded-full pl-4 pr-2">
         <Link to="/" className="flex items-center gap-2.5">
           <Orb hue="amber" size={26} />
-          <span className="text-sm font-semibold tracking-[0.28em]">TIME CAPSULE</span>
+          <span className="whitespace-nowrap text-xs font-semibold tracking-[0.2em] sm:text-sm sm:tracking-[0.28em]">TIME CAPSULE</span>
         </Link>
 
         <nav className="flex items-center gap-1">

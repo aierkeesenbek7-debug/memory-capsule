@@ -8,6 +8,13 @@
       "when": 1795249729278,
       "tag": "0000_time_capsule_schema",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1795321595780,
+      "tag": "0001_capsule_owner_can_read_new_row",
+      "breakpoints": true
     }
   ]
 }

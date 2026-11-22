@@ -28,3 +28,11 @@ use the editor.
   own key and store it in Secrets.
 - **Secrets.** Lovable manages them. Do not put secret values in the repo.
 <!-- LOVABLE:END -->
+
+## Project rules
+
+- Capsule sealing is enforced by database row-level security using the database clock (`open_at <= now()`): story/music (`capsule_contents`), media rows and media files are unreadable before opening. Never rely on client-side date checks for the lock — the UI countdown is display only.
+- Capsule access = owner, or (shared capsules) an invited email in `capsule_participants` matching the signed-in user's email, via security-definer helpers (`is_capsule_member`, `can_upload_to_capsule`). Reuse these helpers in new policies instead of duplicating the logic.
+- Storage paths are `{capsule_id}/cover/...` (visible to members anytime) and `{capsule_id}/media/...` (visible only after opening); storage policies parse these folders, so keep the layout.
+- `open_at` is immutable after insert (trigger); app reads/writes go through the browser client with RLS and TanStack Query — no server functions are needed for capsule CRUD.
+- Visual tokens (orb hues, glass surfaces, animations) live in `src/styles.css`; orbs pick their color through the `data-hue` attribute on `.orb`.
